@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio Website Design</title>
+    <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<body>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">AetherSource</div>
+                </div>
+
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi We'r <span class="input">AetherSource</span></h5>
+                    <h1>Coding E-books</h1>
+                    <p> Coding E-books provides expertly crafted, free eBooks tailored for beginners to excel in programming. With clear guidance and hands-on exercises, it simplifies complex concepts, making languages like Python, Java, and C++ accessible to everyone.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="python/index.html" id="download-btn" class="btn active">Download E-Books</a>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=lordknoweverything1@gmail.com&su=Inquiry&body=Hello,%20I%20would%20like%20to%20know%20more%20about%20your%20services." class="btn" target="_blank">Contact</a>
+
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
+        </div>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        // Toggle button to show/hide navbar
+        var togglebtn = document.querySelector(".togglebtn");
+        var nav = document.querySelector(".navlinks");
+
+        togglebtn.addEventListener("click", function() {
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        });
+
+        // Typed.js for typing text effect
+        var typed = new Typed(".input", {
+            strings: ["AetherSource", "Resource provider"],
+            typeSpeed: 70,
+            backSpeed: 55,
+            loop: true
+        });
+
+        // Open navbar when "Download E-Books" button is clicked
+        var downloadBtn = document.getElementById("download-btn");
+        downloadBtn.addEventListener("click", function() {
+            if (!nav.classList.contains("open")) {
+                togglebtn.classList.add("click");
+                nav.classList.add("open");
+            }
+        });
+     </script>
+</body>
+</html>
